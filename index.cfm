@@ -1,5 +1,5 @@
-<cfset cfmarkdown = createObject('component','cfmarkdown').init() />
-
-<cfset renderMarkdown = cfmarkdown.render('text.md') />
-
-<cfoutput>#renderMarkdown#</cfoutput>
+<cfscript>
+	cfmarkdown = createObject('component','cfmarkdown').init();
+	renderedText = cfmarkdown.render(expandPath('README.md'));
+</cfscript>
+<cfoutput>#renderedText#</cfoutput>
